@@ -1,7 +1,7 @@
 [![Discord](https://img.shields.io/discord/837701868649709568.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/jWFB56RqUN) 
 
 ## FloatingTextCreator
-This FloatingTextCreator plugin is completely different from the ones you see on Poggit while that much easier. 
+This FloatingTextCreator plugin is completely different from the ones you see on Poggit while that much easier and constantly in active development.
 (This idea was taken from VecnaLeaderboards)
 
 
@@ -22,7 +22,9 @@ This FloatingTextCreator plugin is completely different from the ones you see on
 
 - [ ] Player ping
 
-And other suggestions will be taken. Please let me know and I will consider it!
+With other ideas that will be implemented 
+
+And other suggestions will be taken. Please let me know either way and it will be looked into
 
 # Commands & Permissions 
 
