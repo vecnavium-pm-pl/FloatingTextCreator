@@ -25,8 +25,11 @@ I don't see any other ideas or tags for the plugin that should be implemented.
 It's fairly easy yet simple and easy to use and if you make any typo you can easily modify it without needing to rewrite a long paragraph.
 
 1. Go to plugin_data/FloatingTextCreator/config.yml and follow the pattern and configure the texts to your liking with the provided tags
+
 2. Restart your server and join your server
+
 3. Go to the position you wish to create your floating text and simply run /ftc create txt {TxtName}. {TxtName} is the name of your floatingtext you named from your config.yml texts
+
 4. And you should be fine from there and you will be provided with a 1-3 rarely 4 digit ID which will be easy for you to delete and recreate without needing to memorize the IDs when trying to delete it!
 
 # BugReport
