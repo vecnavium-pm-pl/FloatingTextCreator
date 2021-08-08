@@ -12,7 +12,17 @@ This FloatingTextCreator plugin is completely different from the ones you see on
 
 # Planned features
 
-I don't see any other ideas or tags for the plugin that should be implemented.
+- [ ] More tags.
+
+- [ ] EconomyAPI Tag
+
+- [ ] FactionsPro & PiggyFactions Tags
+
+- [ ] Player count online/max online
+
+- [ ] Player ping
+
+And other suggestions will be taken. Please let me know and I will consider it!
 
 # Commands & Permissions 
 
@@ -50,5 +60,5 @@ If you are using a modified Pocketmine-MP build/version you will not get assiste
 
 Have a suggestion?
 
-Feel free to contact me in the [Support Discord Server](https://discord.gg/jWFB56RqUN) and suggest the suggestion you have in mind for this plugin!
+Feel free to contact me in the [Support Discord Server](https://discord.gg/jWFB56RqUN) and suggest the suggestion you have in mind for this plugin
 No Pocketmine-MP Spoons support! If you are using a modified Pocketmine-MP build/version you will not get assisted.
