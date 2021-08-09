@@ -9,7 +9,7 @@ ft-updatetime: 5
 
 # Supported tags for the plugin
 
-# {line} -  Adds an additional line on the text
+# {line} or \n -  Adds an additional line on the text
 # {player} - Get the player's username
 
 # More tags coming soon..

@@ -48,6 +48,7 @@ class Main extends PluginBase {
     public function replaceProcess(Player $player, string $string): string {
         $string = str_replace("{player}", $player->getName(), $string);
         $string = str_replace("{line}", TF::EOL, $string);
+        $string = str_replace("\n", TF::EOL, $string);
         return $string;
     }
 
