@@ -22,8 +22,8 @@ class Main extends PluginBase {
         $this->configVersion = new ConfigVersionTask($this);
     }
 
-    public function onEnable() {
-        $this->saveDefaultConfig();
+    public function onEnable()
+    {
         $this->floatingText = new Config($this->getDataFolder() . "ftc.yml", Config::YAML);
         $this->getServer()->getCommandMap()->register("FloatingTextCreator", new FTCCommand($this));
         $this->getScheduler()->scheduleRepeatingTask(new FTCUpdateTask($this), 20 * $this->getUpdateTimer());
