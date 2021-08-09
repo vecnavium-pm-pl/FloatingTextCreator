@@ -1,0 +1,26 @@
+#==========================================#
+#Config File for FloatingTextCreator
+#==========================================#
+
+CONFIG_VERSION: 1
+
+# Time in seconds for all FloatingTxts to refresh (seconds)
+ft-updatetime: 5
+
+# Supported tags for the plugin
+
+# {line} -  Adds an additional line on the text
+# {player} - Get the player's username
+
+# More tags coming soon..
+
+
+# You can create as much as you want, simply follow the pattern to avoid any errors.
+ft-texts:
+  WelcomeText:
+    - "Hello {player} welcome to the server!"
+    - "Test"
+  RandomText:
+    - "Hello world! 1"
+    - "Hello world! 2"
+
