@@ -49,6 +49,7 @@ class Main extends PluginBase {
     public function replaceProcess(Player $player, string $string): string {
         $string = str_replace("{player}", $player->getName(), $string);
         $string = str_replace("{ip}", Server::getInstance()->getIp(), $string);
+        $string = str_replace("{port}", Server::getInstance()->getPort(), $string);
         $string = str_replace("{line}", TF::EOL, $string);
         $string = str_replace("\n", TF::EOL, $string);
         $string = str_replace("{world}", $player->getLevel()->getName(), $string);
