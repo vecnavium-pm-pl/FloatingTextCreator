@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Vecnavium\FloatingTextCreator;
 
 use pocketmine\Player;
+use pocketmine\Server;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\utils\Config;
 use pocketmine\math\Vector3;
@@ -47,6 +48,7 @@ class Main extends PluginBase {
 
     public function replaceProcess(Player $player, string $string): string {
         $string = str_replace("{player}", $player->getName(), $string);
+        $string = str_replace("{ip}", Server::getInstance()->getIp(), $string);
         $string = str_replace("{line}", TF::EOL, $string);
         $string = str_replace("\n", TF::EOL, $string);
         return $string;
