@@ -12,6 +12,7 @@ ft-updatetime: 5
 # {line} or \n -  Adds an additional line on the text
 # {player} - Get the player's username
 # {ip} - Get the server's IP
+# {world} - Get the world the user is in.
 
 # More tags coming soon..
 

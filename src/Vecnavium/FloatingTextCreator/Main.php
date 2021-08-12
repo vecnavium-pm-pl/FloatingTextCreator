@@ -51,6 +51,7 @@ class Main extends PluginBase {
         $string = str_replace("{ip}", Server::getInstance()->getIp(), $string);
         $string = str_replace("{line}", TF::EOL, $string);
         $string = str_replace("\n", TF::EOL, $string);
+        $string = str_replace("{world}", $player->getLevel()->getName(), $string);
         return $string;
     }
 
