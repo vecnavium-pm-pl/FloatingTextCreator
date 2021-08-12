@@ -58,6 +58,7 @@ class Main extends PluginBase {
         $string = str_replace("{z}", $player->getZ(), $string);
         $string = str_replace("{online}", Server::getInstance()->getQueryInformation()->getPlayerCount(), $string);
         $string = str_replace("{max_online}", Server::getInstance()->getQueryInformation()->getMaxPlayerCount(), $string);
+        $string = str_replace("{ping}", $player->getPing(), $string);
         return $string;
     }
 
