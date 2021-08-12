@@ -5,7 +5,7 @@
 CONFIG_VERSION: 1
 
 # Time in seconds for all FloatingTxts to refresh (seconds)
-ft-updatetime: 5
+ft-updatetime: 1
 
 # Supported tags for the plugin
 
