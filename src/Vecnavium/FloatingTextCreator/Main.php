@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 namespace Vecnavium\FloatingTextCreator;
 
@@ -52,6 +52,9 @@ class Main extends PluginBase {
         $string = str_replace("{line}", TF::EOL, $string);
         $string = str_replace("\n", TF::EOL, $string);
         $string = str_replace("{world}", $player->getLevel()->getName(), $string);
+        $string = str_replace("{x}", $player->getX(), $string);
+        $string = str_replace("{y}", $player->getY(), $string);
+        $string = str_replace("{z}", $player->getZ(), $string);
         return $string;
     }
 

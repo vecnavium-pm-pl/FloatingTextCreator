@@ -21,6 +21,7 @@ ft-updatetime: 5
 ft-texts:
   WelcomeText:
     - "Hello {player} welcome to the server!"
+    - "Your coordinates are X {x} Y {y} Z {z}"
   RandomText:
     - "Hello world! 1"
     - "Hello world! 2"
