@@ -55,6 +55,7 @@ class Main extends PluginBase {
         $string = str_replace("{x}", $player->getX(), $string);
         $string = str_replace("{y}", $player->getY(), $string);
         $string = str_replace("{z}", $player->getZ(), $string);
+        $string = str_replace("{ping}", $player->getPing();, $string);
         return $string;
     }
 
