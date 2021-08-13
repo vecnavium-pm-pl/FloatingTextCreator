@@ -45,7 +45,7 @@ class FTCCommand extends Command
                     return false;
                 }
                 if (!isset($floatingTexts[$args[1]])) {
-                    $sender->sendMessage(TF::DARK_RED . "FloatingText with ID " . TF::YELLOW . $args[1] . TF::RED . " does not exist");
+                    $sender->sendMessage(TF::DARK_RED . "FloatingText with ID " . TF::YELLOW . $args[1] . TF::DARK_RED . " does not exist");
                     return false;
                 }
                 $this->getPlugin()->getServer()->getLevelByName($this->getPlugin()->getFloatingTexts()->getNested("$args[1].level"));
@@ -54,7 +54,7 @@ class FTCCommand extends Command
                 $this->getPlugin()->getFloatingTexts()->remove($args[1]);
                 $this->getPlugin()->getFloatingTexts()->save();
                 unset($this->getPlugin()->floatingTexts[$args[1]]);
-                $sender->sendMessage(TF::DARK_RED . "You have removed the [FT ID: " . TF::WHITE . $args[1] . TF::DARK_RED . "]");
+                $sender->sendMessage(TF::DARK_RED . "You have removed the FT ID: " . TF::WHITE . $args[1] . TF::DARK_RED . ");
                 break;
             default:
                 $sender->sendMessage(TF::WHITE . "FloatingTextCreator Commands");
@@ -76,7 +76,7 @@ class FTCCommand extends Command
                 switch ($args[1]) {
                     case "txt":
                         if (!isset($args[2])) {
-                            $sender->sendMessage(TF::WHITE . "Usage: /ftc create txt {TxtName}");
+                            $sender->sendMessage(TF::DARK_RED . "Usage: /ftc create txt {TxtName}");
                             return false;
                         }
                         if (!isset($texts[$args[2]])) {
