@@ -12,16 +12,14 @@ ft-updatetime: 1
 # {line} or \n -  Adds an additional line on the text
 # {player} - Get the player's username
 # {ip} - Get the server's IP
+# {port} - Get the server's Port
+# {ping} - Get the player's ping
 # {world} - Get the world the user is in.
-
-# More tags coming soon..
-
 
 # You can create as much as you want, simply follow the pattern to avoid any errors.
 ft-texts:
   WelcomeText:
     - "Hello {player} welcome to the server!"
-    - "Your coordinates are X {x} Y {y} Z {z}"
   RandomText:
     - "Hello world! 1"
     - "Hello world! 2"
