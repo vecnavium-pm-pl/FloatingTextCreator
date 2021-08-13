@@ -3,27 +3,33 @@
 
 namespace Vecnavium\FloatingTextCreator;
 
-use pocketmine\Player;
-use pocketmine\Server;
-use pocketmine\utils\TextFormat as TF;
-use pocketmine\utils\Config;
+use pocketmine\level\Position;
 use pocketmine\math\Vector3;
-use pocketmine\level\particle\FloatingTextParticle;
+use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
+use pocketmine\Server;
+use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat as TF;
+use Vecnavium\FloatingTextCreator\Commands\FTCCommand;
 use Vecnavium\FloatingTextCreator\Tasks\ConfigVersionTask;
 use Vecnavium\FloatingTextCreator\Tasks\FTCUpdateTask;
-use Vecnavium\FloatingTextCreator\Commands\FTCCommand;
+use Vecnavium\FloatingTextCreator\Utils\CustomFloatingText;
 
 class Main extends PluginBase {
 
-    public $floatingTexts = [];
+    /** @var array */
+    public array $floatingTexts = [];
+    /** @var Config|null */
+    private Config $floatingText;
+    /** @var ConfigVersionTask|null */
+    private ConfigVersionTask $configVersion;
 
-    public function onLoad()
+    public function onLoad(): void
     {
         $this->configVersion = new ConfigVersionTask($this);
     }
 
-    public function onEnable()
+    public function onEnable(): void
     {
         $this->floatingText = new Config($this->getDataFolder() . "ftc.yml", Config::YAML);
         $this->getServer()->getCommandMap()->register("FloatingTextCreator", new FTCCommand($this));
@@ -31,9 +37,10 @@ class Main extends PluginBase {
         $this->restartFTC();
     }
     
-    public function restartFTC() {
+    public function restartFTC(): void {
         foreach($this->getFloatingTexts()->getAll() as $id => $array) {
-            $this->floatingTexts[$id] = new FloatingTextParticle(new Vector3($array["x"], $array["y"], $array["z"]), "");
+            $this->floatingTexts[$id] = CustomFloatingText::create(Position::fromObject(new Vector3($array["x"], $array["y"], $array["z"]),
+                $this->getServer()->getLevelByName($array['level'])));
         }
     }
 
@@ -54,8 +61,15 @@ class Main extends PluginBase {
         $string = str_replace("{world}", $player->getLevel()->getName(), $string);
         $string = str_replace("{x}", $player->getX(), $string);
         $string = str_replace("{y}", $player->getY(), $string);
-        $string = str_replace("{z}", $player->getZ(), $string);
-        return $string;
+        return str_replace("{z}", $player->getZ(), $string);
+    }
+
+    /**
+     * @return ConfigVersionTask
+     */
+    public function getConfigVersion(): ConfigVersionTask
+    {
+        return $this->configVersion;
     }
 
 }
