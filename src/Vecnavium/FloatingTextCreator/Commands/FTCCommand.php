@@ -54,7 +54,7 @@ class FTCCommand extends Command
                 $this->getPlugin()->getFloatingTexts()->remove($args[1]);
                 $this->getPlugin()->getFloatingTexts()->save();
                 unset($this->getPlugin()->floatingTexts[$args[1]]);
-                $sender->sendMessage(TF::DARK_RED . "You have removed the FT ID: " . TF::WHITE . $args[1] . TF::DARK_RED . ");
+                $sender->sendMessage(TF::DARK_RED . "You have removed the FT ID: [ " . TF::WHITE . $args[1] . TF::DARK_RED .  "]");
                 break;
             default:
                 $sender->sendMessage(TF::WHITE . "FloatingTextCreator Commands");
