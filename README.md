@@ -18,11 +18,6 @@ This FloatingTextCreator plugin is completely different from the ones you see on
 
 - [ ] FactionsPro & PiggyFactions Tags
 
-- [ ] Player count online/max online
-
-- [ ] Player ping
-
-With other ideas that will be implemented 
 
 And other suggestions will be taken. Please let me know either way and it will be looked into
 
