@@ -37,7 +37,7 @@ class FTCUpdateTask extends Task {
                     $ft->spawn($player);
                 }
                 $text = $this->getPlugin()->getFloatingTexts()->getNested("$id.text");
-                if($player->hasPermission("ftc.command.adm")) {
+                if($player->hasPermission("ftc.command")) {
                     $ft->setText($this->getPlugin()->replaceProcess($player, $text) . TF::EOL . TF::RED . "The ID(Only people with the permission can see the ID): " . $id);
                 }else{
                     $ft->setText($this->getPlugin()->replaceProcess($player, $text));
