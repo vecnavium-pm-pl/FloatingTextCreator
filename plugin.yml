@@ -7,6 +7,6 @@ main: Vecnavium\FloatingTextCreator\Main
 mcpe-protocol: [448]
 
 permissions:
-    ftc.command.adm:
+    ftc.command:
       default: op
       description: "Permission and the ability to see IDs and manage FloatingTexts"
