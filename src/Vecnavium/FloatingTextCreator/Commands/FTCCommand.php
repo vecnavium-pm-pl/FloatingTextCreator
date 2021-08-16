@@ -18,7 +18,7 @@ class FTCCommand extends Command
     public function __construct(Main $plugin)
     {
         parent::__construct("ftc", "FloatingTextCreator Commands", "/ftc");
-        $this->setPermission("ftc.command.adm");
+        $this->setPermission("ftc.command");
         $this->plugin = $plugin;
     }
 
