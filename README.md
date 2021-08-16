@@ -16,7 +16,7 @@ This FloatingTextCreator plugin is completely different from the ones you see on
 
 - [ ] EconomyAPI Tag
 
-- [ ] FactionsPro & PiggyFactions Tags
+- [ ] FactionsPro & PiggyFactions Tags (maybe)
 
 
 And other suggestions will be taken. Please let me know either way and it will be looked into
