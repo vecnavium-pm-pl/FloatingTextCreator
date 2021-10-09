@@ -80,8 +80,8 @@ class FTCCommand extends Command
                             return false;
                         }
                         if (!isset($texts[$args[2]])) {
-                            $sender->sendMessage(TF::YELLOW . $args[2] . TF::DARK_RED . " does not exist in the config.yml. This is not a plugin bug! THis is likely something you are doing wrong.");
-                            $sender->sendMessage(TF::YELLOW . $args[2] . TF::DARK_RED . " This is not a plugin bug! This is likely something you are doing wrong.");
+                            $sender->sendMessage(TF::YELLOW . $args[2] . TF::DARK_RED . " does not exist in the config.yml.");
+                            $sender->sendMessage(TF::YELLOW . $args[2] . TF::DARK_RED . " This is not a plugin bug! This is more than likely because you are doing something wrong.");
                             return false;
                         }
                         $id = rand(1, 1000) + rand(1, 1000);
