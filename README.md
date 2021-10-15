@@ -12,11 +12,8 @@ This FloatingTextCreator plugin is completely different from the ones you see on
 
 # Planned features
 
-- [ ] More tags.
-
-- [ ] EconomyAPI Tag
-
-- [ ] FactionsPro & PiggyFactions Tags (maybe)
+No planned features. FloatingTextCreator on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes and protocol updates. 
+FloatingTextCreator PocketMine API 4.0.0 is in development with some major changes, updates, new features and rewrites.
 
 
 And other suggestions will be taken. Please let me know either way and it will be looked into
@@ -55,7 +52,7 @@ If you are using a modified Pocketmine-MP build/version you will not get assiste
 
 # Suggestions
 
-Have a suggestion?
+We will not take any suggestions for FloatingTextCreator API 3.0.0 for the reason below.
 
-Feel free to contact me in the [Support Discord Server](https://discord.gg/jWFB56RqUN) and suggest the suggestion you have in mind for this plugin
-No Pocketmine-MP Spoons support! If you are using a modified Pocketmine-MP build/version you will not get assisted.
+FloatingTextCreator on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes and protocol updates. 
+FloatingTextCreator PocketMine API 4.0.0 is in development with some major changes, updates, new features and rewrites.
