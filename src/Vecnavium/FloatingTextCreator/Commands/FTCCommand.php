@@ -5,7 +5,7 @@ namespace Vecnavium\FloatingTextCreator\Commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat as TF;
 use Vecnavium\FloatingTextCreator\Main;
@@ -86,10 +86,8 @@ class FTCCommand extends Command
                         }
                         $id = rand(1, 1000) + rand(1, 1000);
                         $info = array(
-                            "x" => $sender->getX(),
-                            "y" => $sender->getY(),
-                            "z" => $sender->getZ(),
-                            "level" => $sender->getLevel()->getFolderName(),
+                            $sender->getLocation()->asPosition(),
+                            "level" => $sender->getWorld()->getFolderName(),
                             "text" => implode("{line}", $texts[$args[2]])
                         );
                         $this->getPlugin()->getFloatingTexts()->setNested("$id", $info);

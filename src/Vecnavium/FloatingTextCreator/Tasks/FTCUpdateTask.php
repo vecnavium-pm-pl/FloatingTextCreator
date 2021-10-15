@@ -24,9 +24,7 @@ class FTCUpdateTask extends Task {
         return $this->plugin;
     }
 
-    //Considering on rewriting this kind of a mess in my opinion. Only just wrote on autopilot(mind sense).
-    //Again PRs are accepted
-    public function onRun(int $currentTick): void {
+    public function onRun(): void {
         foreach($this->getPlugin()->getServer()->getOnlinePlayers() as $player) {
             foreach($this->getPlugin()->floatingTexts as $id => $ft) {
                 /** @var CustomFloatingText|null $ft */
