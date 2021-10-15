@@ -14,10 +14,7 @@ This FloatingTextCreator plugin is completely different from the ones you see on
 
 We will not take any suggestions for FloatingTextCreator API 3.0.0 for the reason below.
 
-FloatingTextCreator on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes
-
-
-And other suggestions will be taken. Please let me know either way and it will be looked into
+FloatingTextCreator on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes and protocol updates.
 
 # Commands & Permissions 
 
