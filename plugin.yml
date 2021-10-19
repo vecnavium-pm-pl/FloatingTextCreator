@@ -4,7 +4,7 @@ description: A PocketMine-MP FloatingTextCreator completely different from the o
 api: 3.0.0
 version: 1.0.1
 main: Vecnavium\FloatingTextCreator\Main
-mcpe-protocol: [465]
+mcpe-protocol: [471]
 
 permissions:
     ftc.command:
