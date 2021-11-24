@@ -1,8 +1,13 @@
-[![Discord](https://img.shields.io/discord/837701868649709568.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/jWFB56RqUN) 
+<p align="center">
+    <a href="https://github.com/Vecnavium/FloatingTextCreator"><img src="https://github.com/Vecnavium/FloatingTextCreator/blob/master/icon.png"></img></a><br>
+    <b>This FloatingTextCreator plugin is completely different from the ones you see on Poggit while that much easier and constantly in active development.</b>
+</p>
 
-## FloatingTextCreator
-This FloatingTextCreator plugin is completely different from the ones you see on Poggit while that much easier and constantly in active development.
-(This idea was taken from VecnaLeaderboards)
+<p align="center">
+    <img alt="GitHubrelease" src="https://img.shields.io/github/v/release/Vecnavium/FloatingTextCreator?label=release&sort=semver">
+      <img alt="Stars" src= "https://img.shields.io/github/stars/Vecnavium/FloatingTextCreator?style=for-the-badge">
+    <a href="https://discord.gg/6M9tGyWPjr"><img src="https://img.shields.io/discord/837701868649709568?label=discord&color=7289DA&logo=discord" alt="Discord" /></a>
+</p>
 
 
 # Features 
