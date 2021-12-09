@@ -20,9 +20,9 @@ class Main extends PluginBase {
     /** @var array */
     public array $floatingTexts = [];
     /** @var Config|null */
-    private Config $floatingText;
+    private ?Config $floatingText;
     /** @var ConfigVersionTask|null */
-    private ConfigVersionTask $configVersion;
+    private ?ConfigVersionTask $configVersion;
 
     public function onLoad(): void
     {
@@ -40,7 +40,7 @@ class Main extends PluginBase {
     public function restartFTC(): void {
         foreach($this->getFloatingTexts()->getAll() as $id => $array) {
             $this->floatingTexts[$id] = CustomFloatingText::create(Position::fromObject(new Vector3($array["x"], $array["y"], $array["z"]),
-                $this->getServer()->getLevelByName($array['level'])));
+                $this->getServer()->getWorldManager()->getWorldByName($array['level'])));
         }
     }
 
@@ -59,13 +59,13 @@ class Main extends PluginBase {
         $string = str_replace("{port}", Server::getInstance()->getPort(), $string);
         $string = str_replace("{line}", TF::EOL, $string);
         $string = str_replace("\n", TF::EOL, $string);
-        $string = str_replace("{world}", $player->getLevel()->getName(), $string);
-        $string = str_replace("{x}", $player->getX(), $string);
-        $string = str_replace("{y}", $player->getY(), $string);
-        $string = str_replace("{z}", $player->getZ(), $string);
+        $string = str_replace("{world}", $player->getWorld()->getFolderName(), $string);
+        $string = str_replace("{x}", $player->getPosition()->getX(), $string);
+        $string = str_replace("{y}", $player->getPosition()->getY(), $string);
+        $string = str_replace("{z}", $player->getPosition()->getZ(), $string);
         $string = str_replace("{online}", Server::getInstance()->getQueryInformation()->getPlayerCount(), $string);
         $string = str_replace("{max_online}", Server::getInstance()->getQueryInformation()->getMaxPlayerCount(), $string);
-        $string = str_replace("{ping}", $player->getPing(), $string);
+        $string = str_replace("{ping}", $player->getNetworkSession()->getPing(), $string);
         $string = str_replace("{tps}", Server::getInstance()->getTicksPerSecond(), $string);
         return $string;
     }

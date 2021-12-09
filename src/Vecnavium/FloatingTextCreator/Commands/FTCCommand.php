@@ -48,7 +48,7 @@ class FTCCommand extends Command
                     $sender->sendMessage(TF::DARK_RED . "FloatingText with ID " . TF::YELLOW . $args[1] . TF::DARK_RED . " does not exist");
                     return false;
                 }
-                $this->getPlugin()->getServer()->getLevelByName($this->getPlugin()->getFloatingTexts()->getNested("$args[1].level"));
+                $this->getPlugin()->getServer()->getWorldManager()->getWorldByName($this->getPlugin()->getFloatingTexts()->getNested("$args[1].level"));
                 $ft = $this->getPlugin()->floatingTexts[$args[1]];
                 $ft->setText("");
                 $this->getPlugin()->getFloatingTexts()->remove($args[1]);
