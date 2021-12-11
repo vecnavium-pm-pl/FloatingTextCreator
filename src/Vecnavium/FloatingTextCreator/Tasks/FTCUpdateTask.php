@@ -28,17 +28,17 @@ class FTCUpdateTask extends Task {
         foreach($this->getPlugin()->getServer()->getOnlinePlayers() as $player) {
             foreach($this->getPlugin()->floatingTexts as $id => $ft) {
                 /** @var CustomFloatingText|null $ft */
-                if ($player->getLevel() !== $ft->getPosition()->getLevel() && $ft->isViewer($player)){
+                if ($player->getWorld() !== $ft->getPosition()->getLevel() && $ft->isViewer($player)){
                     $ft->remove($player);
                 }
-                if ($player->getLevel() === $ft->getPosition()->getLevel() && !$ft->isViewer($player)){
+                if ($player->getWorld() === $ft->getPosition()->getLevel() && !$ft->isViewer($player)){
                     $ft->spawn($player);
                 }
                 $text = $this->getPlugin()->getFloatingTexts()->getNested("$id.text");
                 if($player->hasPermission("ftc.command")) {
-                    $ft->setText($this->getPlugin()->replaceProcess($player, $text) . TF::EOL . TF::RED . "The ID(Only people with the permission can see the ID): " . $id);
+                    $ft->update($this->getPlugin()->replaceProcess($player, $text) . TF::EOL . TF::RED . "The ID(Only people with the permission can see the ID): " . $id, $player);
                 }else{
-                    $ft->setText($this->getPlugin()->replaceProcess($player, $text));
+                    $ft->update($this->getPlugin()->replaceProcess($player, $text), $player);
                 }
 
             }
