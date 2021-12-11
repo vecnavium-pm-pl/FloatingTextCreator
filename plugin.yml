@@ -2,6 +2,7 @@ name: FloatingTextCreator
 author: Vecnavium
 description: A PocketMine-MP FloatingTextCreator completely different from the others on Poggit.
 api: 4.0.0
+mcpe-protocol: [465, 471, 475]
 version: 2.0.0
 main: Vecnavium\FloatingTextCreator\Main
 
